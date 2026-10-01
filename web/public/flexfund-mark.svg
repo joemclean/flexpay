@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="FlexFund">
+  <defs>
+    <clipPath id="ff-clip"><circle cx="32" cy="32" r="30"/></clipPath>
+  </defs>
+  <circle cx="32" cy="32" r="31" fill="#000"/>
+  <g clip-path="url(#ff-clip)">
+    <polygon points="21.5,21 21.5,41 41.5,41 1.5,81 -18.5,61" fill="#9542FF"/>
+  </g>
+  <rect x="21.5" y="21" width="20" height="20" fill="#fff"/>
+  <circle cx="32" cy="32" r="30" fill="none" stroke="#fff" stroke-width="1.2"/>
+</svg>

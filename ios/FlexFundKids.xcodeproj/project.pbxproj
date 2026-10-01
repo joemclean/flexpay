@@ -1,0 +1,711 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		001533ECA68059C0A69234F8 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D68D50A3129BBBC3249780 /* AppConfig.swift */; };
+		0731CA8D8C5482402BC7AE89 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C457DDEB2EE61DDADFD2BE07 /* APIClient.swift */; };
+		186F67B45F508EACAA44F6DE /* MoneyViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4241D1759D05D489F952FF /* MoneyViews.swift */; };
+		1DD62F0001DD7DCBB2F33969 /* Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50573744BCF628925623D215 /* Formatting.swift */; };
+		35008A98AA8CFBE8779759EE /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77AD64B03A60B1123575302 /* AppModel.swift */; };
+		3805D0F3FB4913EBE7AF9FAE /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890CE876AFB8F54C26D5641 /* LockView.swift */; };
+		49CB0E51BCE891B781D1B43C /* FlexFundKidsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A0F3772A48BBC277F037DF /* FlexFundKidsTests.swift */; };
+		4CA0CCEA71B297AC153BA44F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102DC91DEEDB8801C9E5A7ED /* ProfileView.swift */; };
+		522AA27E6AD3B3F818F9856B /* KidData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C281917EC868551D997C3A /* KidData.swift */; };
+		5706A43A0FDA8978095EF8B5 /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420E724778CCBC1983636446 /* LearnView.swift */; };
+		6CF2F90AD3852DB7561DCCDE /* Bangers-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27DAC4AAD68157CF56BF421B /* Bangers-Regular.ttf */; };
+		757D1C673F2297B75A7CC03A /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = B93F717F46BBB8DB1912D880 /* OFL.txt */; };
+		75BB1DC6FED5B83A3FFA7A12 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3E5F4F345203C6B79FBB32 /* Theme.swift */; };
+		7F41EC2794393628A11FFD3C /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0235EB8876A718AA36CFEA19 /* FriendsView.swift */; };
+		8334EE64B2CD976D4E1607A5 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDBDCCCC64F796125386C05 /* WalletView.swift */; };
+		85D9DF9A9C3C23FB9149F371 /* Keypad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121C81F1346BD7ED9D2D848F /* Keypad.swift */; };
+		901D515686D05774928D1012 /* SavingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EECCA012024EDE6DE19FCC /* SavingsView.swift */; };
+		916480112F51014B8EBBC8EB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A985690F57851C442F33FF96 /* Models.swift */; };
+		935D41D24D37B46A2F2C54C0 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4A6B6F4A9E3B86ED17616C /* Keychain.swift */; };
+		A347CED4F8A8E251227A53B5 /* FlexFundKidsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF7428801A2A3D0858A40BA /* FlexFundKidsApp.swift */; };
+		D3BDACB27F7665F9784F19C7 /* KidJourneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774F77A9C69223A46E3CF443 /* KidJourneyUITests.swift */; };
+		D851B28599B500FF09987666 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DADBE64D1B668603B9989F /* WelcomeView.swift */; };
+		EA88B69E79631F1C9D980114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 453B835CCF41A838FFA46B5A /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2D7A05344DC13DC3A765E964 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC36155137A80B2C7FAE9B45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D38E75872BE10D6443740E9C;
+			remoteInfo = FlexFundKids;
+		};
+		6DFDD233098FC5FB8DFB6988 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC36155137A80B2C7FAE9B45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D38E75872BE10D6443740E9C;
+			remoteInfo = FlexFundKids;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0235EB8876A718AA36CFEA19 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
+		102DC91DEEDB8801C9E5A7ED /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		121C81F1346BD7ED9D2D848F /* Keypad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keypad.swift; sourceTree = "<group>"; };
+		17DADBE64D1B668603B9989F /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		19C281917EC868551D997C3A /* KidData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidData.swift; sourceTree = "<group>"; };
+		1E3E5F4F345203C6B79FBB32 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		27B8428E283842FDC1B18BA9 /* FlexFundKidsUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = FlexFundKidsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27DAC4AAD68157CF56BF421B /* Bangers-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bangers-Regular.ttf"; sourceTree = "<group>"; };
+		40D0E023A3CB1D493397B949 /* FlexFundKids.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = FlexFundKids.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		420E724778CCBC1983636446 /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
+		453B835CCF41A838FFA46B5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4890CE876AFB8F54C26D5641 /* LockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockView.swift; sourceTree = "<group>"; };
+		50573744BCF628925623D215 /* Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatting.swift; sourceTree = "<group>"; };
+		774F77A9C69223A46E3CF443 /* KidJourneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidJourneyUITests.swift; sourceTree = "<group>"; };
+		8A46AF56C46EB08DE60C76B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8BF7428801A2A3D0858A40BA /* FlexFundKidsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexFundKidsApp.swift; sourceTree = "<group>"; };
+		9C4241D1759D05D489F952FF /* MoneyViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyViews.swift; sourceTree = "<group>"; };
+		A77AD64B03A60B1123575302 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		A985690F57851C442F33FF96 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		AADDDD359B96AC1CBC198E90 /* FlexFundKidsTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = FlexFundKidsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFDBDCCCC64F796125386C05 /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
+		B1D68D50A3129BBBC3249780 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		B5A0F3772A48BBC277F037DF /* FlexFundKidsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexFundKidsTests.swift; sourceTree = "<group>"; };
+		B93F717F46BBB8DB1912D880 /* OFL.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		BB4A6B6F4A9E3B86ED17616C /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		C457DDEB2EE61DDADFD2BE07 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		C7EECCA012024EDE6DE19FCC /* SavingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		001E0472FE1C7E7585FCF704 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				0235EB8876A718AA36CFEA19 /* FriendsView.swift */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		313558DBA3B063499C32BFCF /* Savings */ = {
+			isa = PBXGroup;
+			children = (
+				C7EECCA012024EDE6DE19FCC /* SavingsView.swift */,
+			);
+			path = Savings;
+			sourceTree = "<group>";
+		};
+		314615D2E058A2BEC184959C = {
+			isa = PBXGroup;
+			children = (
+				E5FCB1F261F575965BF6C5DA /* FlexFundKids */,
+				A173EF8826FA51CAAFF99E34 /* FlexFundKidsTests */,
+				AF811719259807026F2BB62F /* FlexFundKidsUITests */,
+				60A058AFEDCC055F98B6F35C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		60A058AFEDCC055F98B6F35C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40D0E023A3CB1D493397B949 /* FlexFundKids.app */,
+				AADDDD359B96AC1CBC198E90 /* FlexFundKidsTests.xctest */,
+				27B8428E283842FDC1B18BA9 /* FlexFundKidsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		60B275E05181A1D5C3C1C8B8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A77AD64B03A60B1123575302 /* AppModel.swift */,
+				8BF7428801A2A3D0858A40BA /* FlexFundKidsApp.swift */,
+				19C281917EC868551D997C3A /* KidData.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6E333CBA4ECD78C7D08E42AF /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				AFDBDCCCC64F796125386C05 /* WalletView.swift */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
+		717DA0D2714FFDEFCA37AD03 /* Learn */ = {
+			isa = PBXGroup;
+			children = (
+				420E724778CCBC1983636446 /* LearnView.swift */,
+			);
+			path = Learn;
+			sourceTree = "<group>";
+		};
+		7EBD07784EE177057739C046 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				453B835CCF41A838FFA46B5A /* Assets.xcassets */,
+				F564E3E6D83922DD10CA7F45 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A173EF8826FA51CAAFF99E34 /* FlexFundKidsTests */ = {
+			isa = PBXGroup;
+			children = (
+				B5A0F3772A48BBC277F037DF /* FlexFundKidsTests.swift */,
+			);
+			path = FlexFundKidsTests;
+			sourceTree = "<group>";
+		};
+		A588CB8E801FB2E2E2E8C453 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				17DADBE64D1B668603B9989F /* WelcomeView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		AD29C4A1F0FA923FF983F01A /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				001E0472FE1C7E7585FCF704 /* Friends */,
+				717DA0D2714FFDEFCA37AD03 /* Learn */,
+				B68F895EBCCE10B7562A378D /* Lock */,
+				A588CB8E801FB2E2E2E8C453 /* Onboarding */,
+				E74F0E74F1579EE8D7627971 /* Profile */,
+				313558DBA3B063499C32BFCF /* Savings */,
+				6E333CBA4ECD78C7D08E42AF /* Wallet */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		AF811719259807026F2BB62F /* FlexFundKidsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				774F77A9C69223A46E3CF443 /* KidJourneyUITests.swift */,
+			);
+			path = FlexFundKidsUITests;
+			sourceTree = "<group>";
+		};
+		B58DC9BF4F8B05A96A870E17 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A985690F57851C442F33FF96 /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B68F895EBCCE10B7562A378D /* Lock */ = {
+			isa = PBXGroup;
+			children = (
+				4890CE876AFB8F54C26D5641 /* LockView.swift */,
+			);
+			path = Lock;
+			sourceTree = "<group>";
+		};
+		E5FCB1F261F575965BF6C5DA /* FlexFundKids */ = {
+			isa = PBXGroup;
+			children = (
+				8A46AF56C46EB08DE60C76B8 /* Info.plist */,
+				60B275E05181A1D5C3C1C8B8 /* App */,
+				FE83339DB26D3E80D1805E33 /* Components */,
+				FAB7C8F53E5DE66B4BA5CCD6 /* Core */,
+				AD29C4A1F0FA923FF983F01A /* Features */,
+				B58DC9BF4F8B05A96A870E17 /* Models */,
+				7EBD07784EE177057739C046 /* Resources */,
+			);
+			path = FlexFundKids;
+			sourceTree = "<group>";
+		};
+		E74F0E74F1579EE8D7627971 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				102DC91DEEDB8801C9E5A7ED /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		F564E3E6D83922DD10CA7F45 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				27DAC4AAD68157CF56BF421B /* Bangers-Regular.ttf */,
+				B93F717F46BBB8DB1912D880 /* OFL.txt */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FAB7C8F53E5DE66B4BA5CCD6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C457DDEB2EE61DDADFD2BE07 /* APIClient.swift */,
+				B1D68D50A3129BBBC3249780 /* AppConfig.swift */,
+				50573744BCF628925623D215 /* Formatting.swift */,
+				BB4A6B6F4A9E3B86ED17616C /* Keychain.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		FE83339DB26D3E80D1805E33 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				121C81F1346BD7ED9D2D848F /* Keypad.swift */,
+				9C4241D1759D05D489F952FF /* MoneyViews.swift */,
+				1E3E5F4F345203C6B79FBB32 /* Theme.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C4911EF170203B0396FFBDBB /* FlexFundKidsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16714BB0AA62AC03AACF0DE2 /* Build configuration list for PBXNativeTarget "FlexFundKidsUITests" */;
+			buildPhases = (
+				319DF5CA6865B972F9B3C34C /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD483300AE568D3A5F57D3CD /* PBXTargetDependency */,
+			);
+			name = FlexFundKidsUITests;
+			packageProductDependencies = (
+			);
+			productName = FlexFundKidsUITests;
+			productReference = 27B8428E283842FDC1B18BA9 /* FlexFundKidsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		D38E75872BE10D6443740E9C /* FlexFundKids */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96ED8CE5AD7056C2830DCF97 /* Build configuration list for PBXNativeTarget "FlexFundKids" */;
+			buildPhases = (
+				0AE6237ABCAA91C51445D4D1 /* Sources */,
+				2B6DFB8D0ABD88A213D5D1B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlexFundKids;
+			packageProductDependencies = (
+			);
+			productName = FlexFundKids;
+			productReference = 40D0E023A3CB1D493397B949 /* FlexFundKids.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FC16BC1FB03F18C30730FA8C /* FlexFundKidsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69EE65DEF064395032596C0D /* Build configuration list for PBXNativeTarget "FlexFundKidsTests" */;
+			buildPhases = (
+				C113A1204516871320682793 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				235DDE1ECB8978BEC2F84D0A /* PBXTargetDependency */,
+			);
+			name = FlexFundKidsTests;
+			packageProductDependencies = (
+			);
+			productName = FlexFundKidsTests;
+			productReference = AADDDD359B96AC1CBC198E90 /* FlexFundKidsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC36155137A80B2C7FAE9B45 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					C4911EF170203B0396FFBDBB = {
+						ProvisioningStyle = Automatic;
+						TestTargetID = D38E75872BE10D6443740E9C;
+					};
+					D38E75872BE10D6443740E9C = {
+						ProvisioningStyle = Automatic;
+					};
+					FC16BC1FB03F18C30730FA8C = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 972777F4FEB129267769E7DC /* Build configuration list for PBXProject "FlexFundKids" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 314615D2E058A2BEC184959C;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 60A058AFEDCC055F98B6F35C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D38E75872BE10D6443740E9C /* FlexFundKids */,
+				FC16BC1FB03F18C30730FA8C /* FlexFundKidsTests */,
+				C4911EF170203B0396FFBDBB /* FlexFundKidsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B6DFB8D0ABD88A213D5D1B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA88B69E79631F1C9D980114 /* Assets.xcassets in Resources */,
+				6CF2F90AD3852DB7561DCCDE /* Bangers-Regular.ttf in Resources */,
+				757D1C673F2297B75A7CC03A /* OFL.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0AE6237ABCAA91C51445D4D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0731CA8D8C5482402BC7AE89 /* APIClient.swift in Sources */,
+				001533ECA68059C0A69234F8 /* AppConfig.swift in Sources */,
+				35008A98AA8CFBE8779759EE /* AppModel.swift in Sources */,
+				A347CED4F8A8E251227A53B5 /* FlexFundKidsApp.swift in Sources */,
+				1DD62F0001DD7DCBB2F33969 /* Formatting.swift in Sources */,
+				7F41EC2794393628A11FFD3C /* FriendsView.swift in Sources */,
+				935D41D24D37B46A2F2C54C0 /* Keychain.swift in Sources */,
+				85D9DF9A9C3C23FB9149F371 /* Keypad.swift in Sources */,
+				522AA27E6AD3B3F818F9856B /* KidData.swift in Sources */,
+				5706A43A0FDA8978095EF8B5 /* LearnView.swift in Sources */,
+				3805D0F3FB4913EBE7AF9FAE /* LockView.swift in Sources */,
+				916480112F51014B8EBBC8EB /* Models.swift in Sources */,
+				186F67B45F508EACAA44F6DE /* MoneyViews.swift in Sources */,
+				4CA0CCEA71B297AC153BA44F /* ProfileView.swift in Sources */,
+				901D515686D05774928D1012 /* SavingsView.swift in Sources */,
+				75BB1DC6FED5B83A3FFA7A12 /* Theme.swift in Sources */,
+				8334EE64B2CD976D4E1607A5 /* WalletView.swift in Sources */,
+				D851B28599B500FF09987666 /* WelcomeView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		319DF5CA6865B972F9B3C34C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3BDACB27F7665F9784F19C7 /* KidJourneyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C113A1204516871320682793 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49CB0E51BCE891B781D1B43C /* FlexFundKidsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		235DDE1ECB8978BEC2F84D0A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D38E75872BE10D6443740E9C /* FlexFundKids */;
+			targetProxy = 2D7A05344DC13DC3A765E964 /* PBXContainerItemProxy */;
+		};
+		BD483300AE568D3A5F57D3CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D38E75872BE10D6443740E9C /* FlexFundKids */;
+			targetProxy = 6DFDD233098FC5FB8DFB6988 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		01E44BEADE63E0793001494D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = FlexFundKids/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flexfund.kids;
+				PRODUCT_NAME = FlexFundKids;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		192FEA974B82E9A3C90F73CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flexfund.kids.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FlexFundKids;
+			};
+			name = Release;
+		};
+		4610F890D209F006BF2AFB95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flexfund.kids.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlexFundKids.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FlexFundKids";
+			};
+			name = Release;
+		};
+		B7A4C95F620AF0A2E8E55B04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C0E320246F30B9BBB772720F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = FlexFundKids/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flexfund.kids;
+				PRODUCT_NAME = FlexFundKids;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		CCCDC7825694ECF5631EAA57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flexfund.kids.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlexFundKids.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FlexFundKids";
+			};
+			name = Debug;
+		};
+		CD2D2B3AB6A76257EDD21BB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		DE52D025AD9A20679BB04E5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flexfund.kids.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FlexFundKids;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16714BB0AA62AC03AACF0DE2 /* Build configuration list for PBXNativeTarget "FlexFundKidsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE52D025AD9A20679BB04E5A /* Debug */,
+				192FEA974B82E9A3C90F73CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		69EE65DEF064395032596C0D /* Build configuration list for PBXNativeTarget "FlexFundKidsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCCDC7825694ECF5631EAA57 /* Debug */,
+				4610F890D209F006BF2AFB95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		96ED8CE5AD7056C2830DCF97 /* Build configuration list for PBXNativeTarget "FlexFundKids" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0E320246F30B9BBB772720F /* Debug */,
+				01E44BEADE63E0793001494D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		972777F4FEB129267769E7DC /* Build configuration list for PBXProject "FlexFundKids" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7A4C95F620AF0A2E8E55B04 /* Debug */,
+				CD2D2B3AB6A76257EDD21BB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC36155137A80B2C7FAE9B45 /* Project object */;
+}

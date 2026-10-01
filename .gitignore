@@ -1,0 +1,19 @@
+node_modules/
+dist/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+server/data/
+.env
+.env.*
+!.env.example
+.DS_Store
+# Xcode
+ios/build/
+ios/DerivedData/
+ios/*.xcodeproj/xcuserdata/
+ios/*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcresult
+
+web/e2e/screenshots/

@@ -1,0 +1,23 @@
+{
+  "name": "@flexfund/server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_OPTIONS=--disable-warning=ExperimentalWarning tsx watch --clear-screen=false src/index.ts",
+    "start": "NODE_OPTIONS=--disable-warning=ExperimentalWarning tsx src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "NODE_OPTIONS=--disable-warning=ExperimentalWarning node --test --import tsx 'test/**/*.test.ts'"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.3",
+    "hono": "^4.13.12",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
