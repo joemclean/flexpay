@@ -16,7 +16,7 @@ struct ProfileView: View {
                 Section {
                     HStack(spacing: 16) {
                         Text(app.child?.avatar ?? "🙂")
-                            .font(.system(size: 44))
+                            .font(.emoji(size: 44))
                             .frame(width: 76, height: 76)
                             .background(Brand.pink.opacity(0.15), in: Circle())
                             .accessibilityHidden(true)
@@ -132,7 +132,7 @@ private struct AchievementTile: View {
     var body: some View {
         VStack(spacing: 6) {
             Text(achievement.emoji)
-                .font(.system(size: 34))
+                .font(.emoji(size: 34))
                 .grayscale(achievement.earned ? 0 : 1)
                 .opacity(achievement.earned ? 1 : 0.45)
             Text(achievement.title)
@@ -165,7 +165,7 @@ private struct AchievementDetail: View {
     var body: some View {
         VStack(spacing: 14) {
             Text(achievement.emoji)
-                .font(.system(size: 64))
+                .font(.emoji(size: 64))
                 .grayscale(achievement.earned ? 0 : 1)
             Text(headline: achievement.title)
                 .font(Brand.headline(32, relativeTo: .title))

@@ -260,9 +260,9 @@ struct PotDetailView: View {
                 VStack(spacing: 14) {
                     if let progress = current.progress {
                         Gauge(value: progress) {
-                            Text(current.emoji)
+                            Text(current.emoji).font(.withEmoji(.body))
                         } currentValueLabel: {
-                            Text(current.emoji).font(.system(size: 34))
+                            Text(current.emoji).font(.emoji(size: 34))
                         }
                         .gaugeStyle(.accessoryCircularCapacity)
                         .tint(current.goalReached ? .green : Brand.pink)

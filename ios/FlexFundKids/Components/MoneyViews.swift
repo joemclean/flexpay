@@ -85,7 +85,7 @@ struct TransactionRow: View {
             SymbolBadge(symbol: transaction.symbol, tint: transaction.isDeclined ? .gray : transaction.tint)
             VStack(alignment: .leading, spacing: 2) {
                 Text(transaction.title)
-                    .font(.body.weight(.semibold))
+                    .font(.withEmoji(.body, weight: .semibold))
                     .lineLimit(1)
                 Text(subtitle)
                     .font(.subheadline)
@@ -137,7 +137,7 @@ struct TransactionDetailView: View {
                     VStack(spacing: 10) {
                         SymbolBadge(symbol: transaction.symbol, tint: transaction.isDeclined ? .gray : transaction.tint, size: 64)
                         Text(transaction.title)
-                            .font(.title2.weight(.bold))
+                            .font(.withEmoji(.title2, weight: .bold))
                             .multilineTextAlignment(.center)
                         Text(Money.signed(transaction.amountCents))
                             .font(.system(size: 40, weight: .heavy, design: .rounded).monospacedDigit())
@@ -164,7 +164,7 @@ struct TransactionDetailView: View {
                         LabeledContent(transaction.amountCents >= 0 ? "From" : "To", value: who)
                     }
                     if let memo = transaction.memo, !memo.isEmpty {
-                        LabeledContent("Note", value: memo)
+                        LabeledContent("Note") { Text(memo).font(.withEmoji(.body)) }
                     }
                 }
                 if transaction.isDeclined {

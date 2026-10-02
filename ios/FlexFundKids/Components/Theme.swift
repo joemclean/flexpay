@@ -61,7 +61,7 @@ struct EmojiBadge: View {
 
     var body: some View {
         Text(emoji)
-            .font(.system(size: size * 0.52))
+            .font(.emoji(size: size * 0.52))
             .frame(width: size, height: size)
             .background(tint.opacity(0.14), in: Circle())
             .accessibilityHidden(true)
@@ -114,7 +114,7 @@ struct ProfileToolbarButton: View {
             app.showProfile = true
         } label: {
             Text(app.child?.avatar ?? "🙂")
-                .font(.title3)
+                .font(.withEmoji(.title3))
                 .frame(width: 36, height: 36)
                 .background(Brand.pink.opacity(0.15), in: Circle())
         }

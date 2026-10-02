@@ -1,3 +1,5 @@
+import CoreText
+import UIKit
 import XCTest
 @testable import FlexFundKids
 
@@ -77,5 +79,48 @@ final class DecodingTests: XCTestCase {
         let data = try JSONEncoder().encode(UnlinkRequest(email: "a@b.co", password: "x"))
         let object = try JSONSerialization.jsonObject(with: data) as? [String: Any]
         XCTAssertNil(object?["code"])
+    }
+}
+
+/// Guards the iOS 26 simulator emoji workaround (see EmojiFallback): whatever runtime the
+/// tests run on, the font the app draws emoji with must produce a colored glyph, not the
+/// black "?" LastResort box.
+final class EmojiRenderingTests: XCTestCase {
+    func testEmojiFontDrawsColorGlyphs() {
+        let font: CTFont = EmojiFallback.descriptor.map { CTFontCreateWithFontDescriptor($0, 40, nil) }
+            ?? CTFontCreateUIFontForLanguage(.system, 40, nil)!
+        for emoji in ["🐶", "🚲", "💰"] {
+            XCTAssertGreaterThan(coloredPixels(emoji, font: font), 50, "\(emoji) did not render in color")
+        }
+    }
+
+    func testTextStyleFontFallsBackToEmoji() {
+        let base = UIFont.preferredFont(forTextStyle: .body) as CTFont
+        let font: CTFont = EmojiFallback.descriptor.map { emoji in
+            let descriptor = CTFontDescriptorCreateCopyWithAttributes(
+                CTFontCopyFontDescriptor(base), [kCTFontCascadeListAttribute: [emoji]] as CFDictionary
+            )
+            return CTFontCreateWithFontDescriptor(descriptor, 40, nil)
+        } ?? CTFontCreateUIFontForLanguage(.system, 40, nil)!
+        XCTAssertGreaterThan(coloredPixels("🍕", font: font), 50)
+    }
+
+    private func coloredPixels(_ string: String, font: CTFont) -> Int {
+        let attributed = NSAttributedString(string: string, attributes: [.init(kCTFontAttributeName as String): font])
+        let line = CTLineCreateWithAttributedString(attributed)
+        let size = 64
+        var pixels = [UInt8](repeating: 0, count: size * size * 4)
+        let context = CGContext(
+            data: &pixels, width: size, height: size, bitsPerComponent: 8, bytesPerRow: size * 4,
+            space: CGColorSpaceCreateDeviceRGB(), bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue
+        )!
+        context.textPosition = CGPoint(x: 4, y: 14)
+        CTLineDraw(line, context)
+        var count = 0
+        for i in stride(from: 0, to: pixels.count, by: 4) where pixels[i + 3] > 0 {
+            let r = Int(pixels[i]), g = Int(pixels[i + 1]), b = Int(pixels[i + 2])
+            if max(r, g, b) - min(r, g, b) > 40 { count += 1 }
+        }
+        return count
     }
 }

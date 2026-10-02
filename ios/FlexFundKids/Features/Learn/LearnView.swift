@@ -164,7 +164,7 @@ struct LessonView: View {
                 ForEach(Array(lesson.pages.enumerated()), id: \.offset) { index, item in
                     VStack(spacing: 18) {
                         Text(item.emoji)
-                            .font(.system(size: 88))
+                            .font(.emoji(size: 88))
                             .accessibilityHidden(true)
                         Text(headline: item.title)
                             .font(Brand.headline(34, relativeTo: .title))

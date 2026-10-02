@@ -24,6 +24,16 @@ API address: defaults to `http://localhost:8787/api/v1`. Override with the
 `FLEXFUND_API_URL` environment variable / launch argument, or (Debug builds) the
 server button on the Welcome screen — on a physical iPhone use your Mac's LAN address.
 
+### Emoji in the iOS 26 simulator
+
+Xcode's iOS 26.x simulator runtimes have a font-catalog bug: the system emoji font points
+at `Fonts/Core/AppleColorEmoji.ttc`, which those runtimes don't ship, so emoji render as
+`?` boxes in every app (Safari too). `Core/EmojiFallback.swift` works around it in
+**simulator builds only** by loading the emoji font the runtime *does* ship
+(`Fonts/CoreAddition/AppleColorEmoji-160px.ttc`) and adding it to the fallback list of the
+fonts used for emoji (`Font.emoji(size:)`, `Font.withEmoji(_:)`). On devices and healthy
+simulators those helpers return the normal system fonts. `EmojiRenderingTests` guards it.
+
 ## Test
 
 ```sh

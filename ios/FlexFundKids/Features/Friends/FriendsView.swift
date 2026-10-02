@@ -163,7 +163,7 @@ private struct PendingRequestRow: View {
                 Text(request.direction == .send ? "Send to \(request.contactName ?? "friend")" : "Ask \(request.contactName ?? "parent")")
                     .font(.body.weight(.semibold))
                 Text(request.note?.isEmpty == false ? request.note! : request.createdAt.formatted(.relative(presentation: .named)))
-                    .font(.subheadline)
+                    .font(.withEmoji(.subheadline))
                     .foregroundStyle(.secondary)
                     .lineLimit(1)
             }
@@ -243,7 +243,7 @@ struct FriendDetailView: View {
                                 Text(request.direction == .send ? "You sent" : "You asked")
                                     .font(.body.weight(.semibold))
                                 Text(request.note?.isEmpty == false ? request.note! : request.createdAt.formatted(date: .abbreviated, time: .omitted))
-                                    .font(.subheadline)
+                                    .font(.withEmoji(.subheadline))
                                     .foregroundStyle(.secondary)
                                     .lineLimit(1)
                             }
@@ -421,11 +421,11 @@ struct MoneyRequestFlow: View {
         List {
             Section {
                 LabeledContent(direction == .send ? "To" : "Ask") {
-                    Text("\(contact.avatar) \(contact.name)")
+                    Text("\(contact.avatar) \(contact.name)").font(.withEmoji(.body))
                 }
                 LabeledContent("Amount", value: Money.format(amountCents))
                 if !note.trimmingCharacters(in: .whitespaces).isEmpty {
-                    LabeledContent("For", value: note)
+                    LabeledContent("For") { Text(note).font(.withEmoji(.body)) }
                 }
                 if direction == .send, let spending {
                     LabeledContent("Left after", value: Money.format(max(0, spending - amountCents)))

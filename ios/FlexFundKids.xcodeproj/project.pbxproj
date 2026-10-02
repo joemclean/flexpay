@@ -22,6 +22,7 @@
 		75BB1DC6FED5B83A3FFA7A12 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3E5F4F345203C6B79FBB32 /* Theme.swift */; };
 		7F41EC2794393628A11FFD3C /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0235EB8876A718AA36CFEA19 /* FriendsView.swift */; };
 		8334EE64B2CD976D4E1607A5 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDBDCCCC64F796125386C05 /* WalletView.swift */; };
+		83A7EB9B5889B429C38B1D2F /* EmojiFallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C1AB69CCD1B5609394DA38 /* EmojiFallback.swift */; };
 		85D9DF9A9C3C23FB9149F371 /* Keypad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121C81F1346BD7ED9D2D848F /* Keypad.swift */; };
 		901D515686D05774928D1012 /* SavingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EECCA012024EDE6DE19FCC /* SavingsView.swift */; };
 		916480112F51014B8EBBC8EB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A985690F57851C442F33FF96 /* Models.swift */; };
@@ -56,6 +57,7 @@
 		17DADBE64D1B668603B9989F /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		19C281917EC868551D997C3A /* KidData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidData.swift; sourceTree = "<group>"; };
 		1E3E5F4F345203C6B79FBB32 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		26C1AB69CCD1B5609394DA38 /* EmojiFallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiFallback.swift; sourceTree = "<group>"; };
 		27B8428E283842FDC1B18BA9 /* FlexFundKidsUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = FlexFundKidsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27DAC4AAD68157CF56BF421B /* Bangers-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bangers-Regular.ttf"; sourceTree = "<group>"; };
 		40D0E023A3CB1D493397B949 /* FlexFundKids.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = FlexFundKids.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -241,6 +243,7 @@
 			children = (
 				C457DDEB2EE61DDADFD2BE07 /* APIClient.swift */,
 				B1D68D50A3129BBBC3249780 /* AppConfig.swift */,
+				26C1AB69CCD1B5609394DA38 /* EmojiFallback.swift */,
 				50573744BCF628925623D215 /* Formatting.swift */,
 				BB4A6B6F4A9E3B86ED17616C /* Keychain.swift */,
 			);
@@ -377,6 +380,7 @@
 				0731CA8D8C5482402BC7AE89 /* APIClient.swift in Sources */,
 				001533ECA68059C0A69234F8 /* AppConfig.swift in Sources */,
 				35008A98AA8CFBE8779759EE /* AppModel.swift in Sources */,
+				83A7EB9B5889B429C38B1D2F /* EmojiFallback.swift in Sources */,
 				A347CED4F8A8E251227A53B5 /* FlexFundKidsApp.swift in Sources */,
 				1DD62F0001DD7DCBB2F33969 /* Formatting.swift in Sources */,
 				7F41EC2794393628A11FFD3C /* FriendsView.swift in Sources */,

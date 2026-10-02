@@ -69,7 +69,7 @@ struct LockView: View {
     private var header: some View {
         VStack(spacing: 10) {
             Text(app.child?.avatar ?? "👋")
-                .font(.system(size: 54))
+                .font(.emoji(size: 54))
                 .frame(width: 96, height: 96)
                 .background(.white.opacity(0.22), in: Circle())
                 .accessibilityHidden(true)
