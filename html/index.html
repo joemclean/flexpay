@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FlexFund Kids prototypes</title>
+  <meta name="description" content="21 FlexFund Kids prototype screens exported from Miro.">
+  <style>
+
+:root { color-scheme: light dark; }
+.ff-page {
+  margin: 0;
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: #e8e8ed;
+}
+.ff-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 16px;
+  font: 500 13px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #3a3a3f;
+}
+.ff-toolbar a, .ff-toolbar button { color: inherit; text-decoration: none; }
+.ff-toolbar-home { color: #0a66d8 !important; }
+.ff-toolbar-home::before { content: "‹ "; }
+.ff-toolbar-title { flex: 1; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: #6e6e73; }
+.ff-toolbar-title strong { color: #1d1d1f; font-weight: 600; }
+.ff-toolbar-pager { display: inline-flex; align-items: center; gap: 4px; font-variant-numeric: tabular-nums; }
+.ff-toolbar-pager > a, .ff-toolbar-pager > span[aria-hidden] {
+  display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 8px; font-size: 20px; line-height: 1;
+}
+.ff-toolbar-pager > a:hover { background: rgb(0 0 0 / 0.07); }
+.ff-toolbar-pager > span[aria-hidden] { opacity: 0.3; }
+.ff-toolbar-hotspots {
+  font: inherit; cursor: pointer; padding: 4px 10px; border-radius: 999px; border: 1px solid rgb(0 0 0 / 0.15); background: transparent;
+}
+.ff-toolbar-hotspots[aria-pressed="true"] { background: #2563eb; border-color: #2563eb; color: #fff !important; }
+.ff-stage {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  display: flex;
+  padding: 4px 24px 24px;
+}
+.ff-frame {
+  flex: none;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 0.06), 0 12px 40px rgb(0 0 0 / 0.16);
+}
+.ff-framed .ff-toolbar, .ff-no-chrome .ff-toolbar { display: none; }
+.ff-framed .ff-page { background: transparent; }
+.ff-framed .ff-stage { padding: 0; overflow: hidden; }
+.ff-framed .ff-frame { border-radius: 0; box-shadow: none; }
+.ff-no-chrome:not(.ff-framed) .ff-stage { padding-top: 24px; }
+@media (prefers-color-scheme: dark) {
+  .ff-page { background: #1c1c1e; }
+  .ff-toolbar { color: #d1d1d6; }
+  .ff-toolbar-home { color: #4c9bff !important; }
+  .ff-toolbar-title { color: #8e8e93; }
+  .ff-toolbar-title strong { color: #f5f5f7; }
+  .ff-toolbar-pager > a:hover { background: rgb(255 255 255 / 0.1); }
+  .ff-toolbar-hotspots { border-color: rgb(255 255 255 / 0.2); }
+  .ff-frame { box-shadow: 0 0 0 1px rgb(255 255 255 / 0.08), 0 12px 40px rgb(0 0 0 / 0.5); }
+}
+.ff-gallery {
+  margin: 0;
+  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1d1d1f;
+  background: #f5f5f7;
+}
+.ff-gallery *, .ff-gallery *::before, .ff-gallery *::after { box-sizing: border-box; }
+.ff-gallery-header, .ff-gallery main { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+.ff-gallery-header { padding-top: 48px; }
+.ff-gallery-header h1 { font-size: 32px; line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 10px; }
+.ff-gallery-header p { margin: 0; max-width: 70ch; color: #515154; }
+.ff-gallery-header a { color: #0a66d8; }
+.ff-gallery main { padding-bottom: 64px; }
+.ff-gallery kbd {
+  font: 600 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace; padding: 2px 6px; border-radius: 5px;
+  border: 1px solid rgb(0 0 0 / 0.15); border-bottom-width: 2px; background: #fff;
+}
+.ff-proto {
+  margin-top: 28px; padding: 24px; border-radius: 18px; background: #fff;
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 0.05), 0 1px 3px rgb(0 0 0 / 0.06);
+}
+.ff-proto-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.ff-proto h2 { display: flex; align-items: center; gap: 10px; margin: 0; font-size: 21px; letter-spacing: -0.01em; }
+.ff-proto > p { margin: 4px 0 20px; color: #6e6e73; }
+.ff-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--accent); }
+.ff-badge {
+  font-size: 12px; font-weight: 600; padding: 2px 9px; border-radius: 999px;
+  color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+.ff-play {
+  font-size: 14px; font-weight: 600; text-decoration: none; padding: 8px 16px; border-radius: 999px;
+  color: #fff; background: var(--accent);
+}
+.ff-play:hover { filter: brightness(1.08); }
+.ff-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 20px; }
+.ff-grid a { height: 100%; display: flex; flex-direction: column; justify-content: space-between; gap: 8px; text-decoration: none; color: inherit; border-radius: 12px; outline: none; }
+.ff-thumb {
+  display: block; position: relative; overflow: hidden; border-radius: 10px; background: #e8e8ed;
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 0.08); transition: transform 150ms ease, box-shadow 150ms ease;
+}
+.ff-thumb iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; pointer-events: none; }
+.ff-grid a:hover .ff-thumb, .ff-grid a:focus-visible .ff-thumb {
+  transform: translateY(-2px); box-shadow: 0 0 0 2px var(--accent), 0 10px 24px rgb(0 0 0 / 0.12);
+}
+.ff-thumb-label { font-size: 13px; font-weight: 500; }
+@media (prefers-color-scheme: dark) {
+  .ff-gallery { color: #f5f5f7; background: #000; }
+  .ff-gallery-header p, .ff-proto > p { color: #a1a1a6; }
+  .ff-gallery-header a { color: #4c9bff; }
+  .ff-gallery kbd { background: #1c1c1e; border-color: rgb(255 255 255 / 0.2); }
+  .ff-proto { background: #1c1c1e; box-shadow: 0 0 0 1px rgb(255 255 255 / 0.08); }
+  .ff-thumb { background: #2c2c2e; box-shadow: 0 0 0 1px rgb(255 255 255 / 0.1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ff-thumb { transition: none; }
+  .ff-grid a:hover .ff-thumb, .ff-grid a:focus-visible .ff-thumb { transform: none; }
+}
+
+  </style>
+</head>
+<body class="ff-gallery">
+  <header class="ff-gallery-header">
+    <h1>FlexFund Kids prototypes</h1>
+    <p>21 screens in 4 prototypes, exported from the Miro board
+      <a href="https://miro.com/app/board/uXjVJ-_Vyh4=/">Prototypes</a> on October 5, 2026.
+      Every file in this folder opens on its own. Click a screen's hotspots to move through the flow;
+      press <kbd>H</kbd> to show them and <kbd>←</kbd> <kbd>→</kbd> to step through screens.</p>
+  </header>
+  <main>
+    <section class="ff-proto" id="prototype-a" style="--accent: #9542FF">
+      <div class="ff-proto-header">
+        <h2><span class="ff-dot" aria-hidden="true"></span>Prototype A</h2>
+        <a class="ff-play" href="prototype-a-01-welcome.html">Play from start →</a>
+      </div>
+      <p>Purple exploration on light surfaces with the new FlexFund mark.</p>
+      <ol class="ff-grid">
+        <li>
+          <a href="prototype-a-01-welcome.html">
+            <span class="ff-thumb" style="aspect-ratio: 453.58124355891454 / 1078.918584678804">
+              <iframe src="prototype-a-01-welcome.html" loading="lazy" tabindex="-1" aria-hidden="true" title=""></iframe>
+            </span>
+            <span class="ff-thumb-label">1. Welcome</span>
+          </a>
+        </li>
+        <li>
+          <a href="prototype-a-02-pin.html">
+            <span class="ff-thumb" style="aspect-ratio: 500.0000000000034 / 1080.0000000000073">
+              <iframe src="prototype-a-02-pin.html" loading="lazy" tabindex="-1" aria-hidden="true" title=""></iframe>
+            </span>
+            <span class="ff-thumb-label">2. Pin</span>
+          </a>
+        </li>
+        <li>
+          <a href="prototype-a-03-overview.html">
+            <span class="ff-thumb" style="aspect-ratio: 503.06222750948376 / 1086.6144114204849">
+              <iframe src="prototype-a-03-overview.html" loading="lazy" tabindex="-1" aria-hidden="true" title=""></iframe>
+            </span>
+            <span class="ff-thumb-label">3. Overview</span>
+          </a>
+        </li>
+        <li>
+          <a href="prototype-a-04-wallet.html">
+            <span class="ff-thumb" style="aspect-ratio: 503.0622275094836 / 1086.6144114204844">
+              <iframe src="prototype-a-04-wallet.html" loading="lazy" tabindex="-1" aria-hidden="true" title=""></iframe>
+            </span>
+            <span class="ff-thumb-label">4. Wallet</span>
+          </a>
+        </li>
+        <li>
+          <a href="prototype-a-05-card.html">
+            <span class="ff-thumb" style="aspect-ratio: 500.0000000000034 / 1081.3333333333408">
+              <iframe src="prototype-a-05-card.html" loading="lazy" tabindex="-1" aria-hidden="true" title=""></iframe>
+            </span>
+            <span class="ff-thumb-label">5. Card</span>
+          </a>
+        </li>
+        <li>
+          <a href="prototype-a-06-friends.html">
+            <span class="ff-thumb" style="aspect-ratio: 503.0622275094836 / 1086.6144114204844">
+              <iframe src="prototype-a-06-friends.html" loading="lazy" tabindex="-1" aria-hidden="true" title=""></iframe>
+            </span>
+            <span class="ff-thumb-label">6. Friends</span>
+          </a>
+        </li>
+      </ol>
+    </section>
+    <section class="ff-proto" id="prototype-b" style="--accent: #EB4489">
+      <div class="ff-proto-header">
+        <h2><span class="ff-dot" aria-hidden="true"></span>Prototype B <span class="ff-badge">Chosen in spec</span></h2>
+        <a class="ff-play" href="prototype-b-01-welcome.html">Play from start →</a>
+      </div>
+      <p>Pink-to-purple gradient with the Bangers headline font and the dog mascot. Selected as the design in Spec: Login Experience.</p>
+      <ol class="ff-grid">
+        <li>
+          <a href="prototype-b-01-welcome.html">
+            <span class="ff-thumb" style="aspect-ratio: 453.58124355891454 / 1078.918584678804">
+              <iframe src="prototype-b-01-welcome.html" loading="lazy" tabindex="-1" aria-hidden="true" title=""></iframe>
+            </span>
+            <span class="ff-thumb-label">1. Welcome</span>
+          </a>
+        </li>
+        <li>
+          <a href="prototype-b-02-pin.html">
+            <span class="ff-thumb" style="aspect-ratio: 500.0000000000034 / 1080.0000000000073">
+              <iframe src="prototype-b-02-pin.html" loading="lazy" tabindex="-1" aria-hidden="true" title=""></iframe>
+            </span>
+            <span class="ff-thumb-label">2. Pin</span>
+          </a>
+        </li>
+        <li>
+          <a href="prototype-b-03-savings.html">
+            <span class="ff-thumb" style="aspect-ratio: 503.06222750948376 / 1086.6144114204849">
+              <iframe src="prototype-b-03-savings.html" loading="lazy" tabindex="-1" aria-hidden="true" title=""></iframe>
+            </span>
+            <span class="ff-thumb-label">3. Savings</span>
+          </a>
+        </li>
+        <li>
+          <a href="prototype-b-04-wallet.html">
+            <span class="ff-thumb" style="aspect-ratio: 503.0622275094836 / 1086.6144114204844">
+              <iframe src="prototype-b-04-wallet.html" loading="lazy" tabindex="-1" aria-hidden="true" title=""></iframe>
+            </span>
+            <span class="ff-thumb-label">4. Wallet</span>
+          </a>
+        </li>
+        <li>
+          <a href="prototype-b-05-card.html">
+            <span class="ff-thumb" style="aspect-ratio: 500.0000000000034 / 1081.3333333333408">
+              <iframe src="prototype-b-05-card.html" loading="lazy" tabindex="-1" aria-hidden="true" title=""></iframe>
+            </span>
+            <span class="ff-thumb-label">5. Card</span>
+          </a>
+        </li>
+        <li>
+          <a href="prototype-b-06-friends.html">
+            <span class="ff-thumb" style="aspect-ratio: 503.0622275094836 / 1086.6144114204844">
+              <iframe src="prototype-b-06-friends.html" loading="lazy" tabindex="-1" aria-hidden="true" title=""></iframe>
+            </span>
+            <span class="ff-thumb-label">6. Friends</span>
+          </a>
+        </li>
+      </ol>
+    </section>
+    <section class="ff-proto" id="prototype-c" style="--accent: #16A34A">
+      <div class="ff-proto-header">
+        <h2><span class="ff-dot" aria-hidden="true"></span>Prototype C</h2>
+        <a class="ff-play" href="prototype-c-01-welcome.html">Play from start →</a>
+      </div>
+      <p>Green exploration of the same Welcome → PIN → Overview → Wallet → Card → Friends flow.</p>
+      <ol class="ff-grid">
+        <li>
+          <a href="prototype-c-01-welcome.html">
+            <span class="ff-thumb" style="aspect-ratio: 453.58124355891454 / 1078.918584678804">
+              <iframe src="prototype-c-01-welcome.html" loading="lazy" tabindex="-1" aria-hidden="true" title=""></iframe>
+            </span>
+            <span class="ff-thumb-label">1. Welcome</span>
+          </a>
+        </li>
+        <li>
+          <a href="prototype-c-02-pin.html">
+            <span class="ff-thumb" style="aspect-ratio: 500.0000000000034 / 1080.0000000000073">
+              <iframe src="prototype-c-02-pin.html" loading="lazy" tabindex="-1" aria-hidden="true" title=""></iframe>
+            </span>
+            <span class="ff-thumb-label">2. Pin</span>
+          </a>
+        </li>
+        <li>
+          <a href="prototype-c-03-overview.html">
+            <span class="ff-thumb" style="aspect-ratio: 503.06222750948376 / 1086.6144114204849">
+              <iframe src="prototype-c-03-overview.html" loading="lazy" tabindex="-1" aria-hidden="true" title=""></iframe>
+            </span>
+            <span class="ff-thumb-label">3. Overview</span>
+          </a>
+        </li>
+        <li>
+          <a href="prototype-c-04-wallet.html">
+            <span class="ff-thumb" style="aspect-ratio: 503.0622275094836 / 1086.6144114204844">
+              <iframe src="prototype-c-04-wallet.html" loading="lazy" tabindex="-1" aria-hidden="true" title=""></iframe>
+            </span>
+            <span class="ff-thumb-label">4. Wallet</span>
+          </a>
+        </li>
+        <li>
+          <a href="prototype-c-05-card.html">
+            <span class="ff-thumb" style="aspect-ratio: 500.0000000000034 / 1081.3333333333408">
+              <iframe src="prototype-c-05-card.html" loading="lazy" tabindex="-1" aria-hidden="true" title=""></iframe>
+            </span>
+            <span class="ff-thumb-label">5. Card</span>
+          </a>
+        </li>
+        <li>
+          <a href="prototype-c-06-friends.html">
+            <span class="ff-thumb" style="aspect-ratio: 503.0622275094836 / 1086.6144114204844">
+              <iframe src="prototype-c-06-friends.html" loading="lazy" tabindex="-1" aria-hidden="true" title=""></iframe>
+            </span>
+            <span class="ff-thumb-label">6. Friends</span>
+          </a>
+        </li>
+      </ol>
+    </section>
+    <section class="ff-proto" id="goals" style="--accent: #E84388">
+      <div class="ff-proto-header">
+        <h2><span class="ff-dot" aria-hidden="true"></span>Goals &amp; activity</h2>
+        <a class="ff-play" href="goals-01-welcome-login.html">Play from start →</a>
+      </div>
+      <p>Sign-in, a savings-goal dashboard (&quot;New Bicycle&quot;) and an activity screen with goal progress.</p>
+      <ol class="ff-grid">
+        <li>
+          <a href="goals-01-welcome-login.html">
+            <span class="ff-thumb" style="aspect-ratio: 375 / 667">
+              <iframe src="goals-01-welcome-login.html" loading="lazy" tabindex="-1" aria-hidden="true" title=""></iframe>
+            </span>
+            <span class="ff-thumb-label">1. Welcome/Login</span>
+          </a>
+        </li>
+        <li>
+          <a href="goals-02-dashboard-home.html">
+            <span class="ff-thumb" style="aspect-ratio: 375 / 976">
+              <iframe src="goals-02-dashboard-home.html" loading="lazy" tabindex="-1" aria-hidden="true" title=""></iframe>
+            </span>
+            <span class="ff-thumb-label">2. Dashboard/Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="goals-03-activity.html">
+            <span class="ff-thumb" style="aspect-ratio: 375 / 1066">
+              <iframe src="goals-03-activity.html" loading="lazy" tabindex="-1" aria-hidden="true" title=""></iframe>
+            </span>
+            <span class="ff-thumb-label">3. Activity</span>
+          </a>
+        </li>
+      </ol>
+    </section>
+  </main>
+</body>
+</html>
